@@ -431,11 +431,6 @@ section[id],
   color: var(--muted);
 }
 
-.today-kcal {
-  font-family: var(--font-data);
-  font-weight: 400;
-}
-
 .macros {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
