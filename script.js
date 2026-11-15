@@ -72,3 +72,35 @@
       });
   });
 })();
+
+// Sticky nav: add a shadow once the page scrolls, and highlight the link
+// for the section currently in view.
+(function () {
+  var header = document.querySelector(".site-header");
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var targets = links.map(function (a) {
+    return document.querySelector(a.getAttribute("href"));
+  });
+
+  function update() {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+    var offset = header.offsetHeight + 40;
+    var current = -1;
+    targets.forEach(function (el, i) {
+      if (el && el.getBoundingClientRect().top - offset <= 0) current = i;
+    });
+    // "How it works" sits inside the solution section; past the last
+    // target (the sign-up panel), clear the highlight.
+    var register = document.getElementById("register");
+    if (register && register.getBoundingClientRect().top - offset <= 0) current = -1;
+    links.forEach(function (a, i) {
+      a.classList.toggle("is-active", i === current);
+      if (i === current) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+})();

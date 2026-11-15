@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Attune · Training and nutrition, built around each other</title>
-  <meta name="description" content="Attune gives amateur endurance athletes an AI training plan and a nutrition plan that adapts to it, with an optional matched sports nutrition professional. Register your interest for early access." />
+  <meta name="description" content="Attune gives amateur endurance athletes a personalised, adaptive training plan and a nutrition plan that adapts to it, with an optional matched sports nutrition professional. Register your interest for early access." />
   <meta property="og:title" content="Attune · Training and nutrition, built around each other" />
-  <meta property="og:description" content="An AI training plan and a nutrition plan that adapts to it, for runners, cyclists, swimmers and triathletes. Register your interest." />
+  <meta property="og:description" content="A personalised, adaptive training plan and a nutrition plan that adapts to it, for runners, cyclists, swimmers and triathletes. Register your interest." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0E3A3C" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -21,8 +21,24 @@
     <symbol id="fork" viewBox="0 0 40 65"><path d="M3.5,0 L9.5,0 Q13,0 13,3.5 L13,29 L20,36 L27,29 L27,3.5 Q27,0 30.5,0 L36.5,0 Q40,0 40,3.5 L40,35.75 C40,41 32,44.25 24,44.25 L24,61.3 Q24,65 20,65 Q16,65 16,61.3 L16,44.25 C8,44.25 0,41 0,35.75 L0,3.5 Q0,0 3.5,0 Z" fill="currentColor"/></symbol>
   </svg>
 
+  <!-- Sticky site navigation -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a href="#top" class="wordmark" aria-label="Attune, back to top">
+        <span class="wm-at">At</span><span class="wm-tune">t<svg class="wm-fork"><use href="#fork" /></svg>ne</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#concept"><span class="nav-the">The </span>concept</a></li>
+        <li><a href="#problem"><span class="nav-the">The </span>problem</a></li>
+        <li><a href="#solution"><span class="nav-the">The </span>solution</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+      </ul>
+      <a href="#register" class="nav-cta">Get early access</a>
+    </nav>
+  </header>
+
   <!-- Hero -->
-  <header class="hero">
+  <section class="hero" id="top">
     <svg class="ribbon ribbon--hero" viewBox="0 0 600 700" fill="none" aria-hidden="true">
       <defs>
         <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="1">
@@ -37,12 +53,6 @@
       <path d="M20 380 C 40 230, 160 180, 220 120 C 280 60, 360 120, 330 220 C 300 320, 160 330, 120 400" stroke="#0E3A3C" stroke-opacity="0.06" stroke-width="30" stroke-linecap="round" />
     </svg>
 
-    <nav class="container nav">
-      <a href="#" class="wordmark" aria-label="Attune">
-        <span class="wm-at">At</span><span class="wm-tune">t<svg class="wm-fork"><use href="#fork" /></svg>ne</span>
-      </a>
-      <a href="#register" class="nav-link">Get early access</a>
-    </nav>
 
     <div class="container hero-body">
       <p class="eyebrow">For runners, cyclists, swimmers &amp; triathletes</p>
@@ -53,10 +63,10 @@
       </p>
       <div class="hero-cta">
         <a href="#register" class="btn btn--accent">Register your interest</a>
-        <a href="#concept" class="btn btn--ghost">How it works</a>
+        <a href="#how-it-works" class="btn btn--ghost">How it works</a>
       </div>
     </div>
-  </header>
+  </section>
 
   <main>
     <!-- 1. Overview -->
@@ -64,7 +74,7 @@
       <div class="split">
         <div>
           <p class="eyebrow">The concept</p>
-          <h2>A coach for the other 99%</h2>
+          <h2>A coach for the other 90%</h2>
           <p class="body-lg">
             Attune is a training and nutrition coaching app for amateur and recreational endurance athletes.
             It builds your training plan around your goal event, level and target time. Then it builds a
@@ -139,8 +149,8 @@
       <div class="cards cards--3 pillars">
         <article class="card pillar">
           <span class="pillar-num">01</span>
-          <h3>AI training plan</h3>
-          <p>Built around your goal event, current level and target time. Every session has a clear structure and a target pace, not just a distance.</p>
+          <h3>Personalised, adaptive training plan</h3>
+          <p>Built around your goal event, current level and target time, and adjusted as your training actually goes. Every session has a clear structure and a target pace, not just a distance.</p>
         </article>
         <article class="card pillar pillar--accent">
           <span class="pillar-num">02</span>
@@ -177,7 +187,7 @@
         <p class="week-note">Example only. Your targets come from your own plan, body weight and level.</p>
       </figure>
 
-      <div class="how">
+      <div class="how" id="how-it-works">
         <h3 class="how-title">How it works</h3>
         <ol class="steps">
           <li class="step">

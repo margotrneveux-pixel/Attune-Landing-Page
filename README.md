@@ -4,7 +4,7 @@ The pre-launch landing page for Attune, the AI training-plan and adaptive-nutrit
 
 1. **The concept**: what Attune is, and the >90% of athletes who are amateurs
 2. **The problem**: under-fuelling and RED-S risk, plus five pain points from athlete interviews
-3. **The solution**: the three pillars (AI training plan, adaptive nutrition, a matched professional), a sample week chart and how it works
+3. **The solution**: the three pillars (personalised, adaptive training plan, adaptive nutrition, a matched professional), a sample week chart and how it works
 4. **Register your interest**: an email sign-up form
 
 It's a static site (HTML, CSS and a little JavaScript) with no build step and no dependencies. Colours, type and the wordmark follow the Attune brand guidelines (September 2026).
