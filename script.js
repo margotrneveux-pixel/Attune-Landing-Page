@@ -29,6 +29,7 @@
 
   input.addEventListener("input", function () {
     input.removeAttribute("aria-invalid");
+    form.classList.remove("is-invalid");
     if (status.classList.contains("is-error")) setStatus("");
   });
 
@@ -38,6 +39,7 @@
 
     if (!EMAIL_RE.test(email)) {
       input.setAttribute("aria-invalid", "true");
+      form.classList.add("is-invalid");
       setStatus("Please enter a valid email address.", true);
       input.focus();
       return;
@@ -103,4 +105,36 @@
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
   update();
+})();
+
+// Week chart: hover tooltip on each bar.
+(function () {
+  var chart = document.querySelector(".week-chart");
+  if (!chart) return;
+  var tip = chart.querySelector(".tooltip");
+
+  Array.prototype.forEach.call(chart.querySelectorAll(".day"), function (day) {
+    function show() {
+      var bar = day.querySelector(".bar");
+      var c = chart.getBoundingClientRect();
+      var b = bar.getBoundingClientRect();
+      tip.textContent = day.getAttribute("data-tip");
+      var x = b.left + b.width / 2 - c.left;
+      // Keep the tooltip inside the chart horizontally.
+      var half = tip.offsetWidth / 2;
+      x = Math.max(half, Math.min(c.width - half, x));
+      tip.style.left = x + "px";
+      tip.style.top = b.top - c.top - 30 + "px";
+      tip.classList.add("is-visible");
+    }
+    function hide() {
+      tip.classList.remove("is-visible");
+    }
+    day.addEventListener("mouseenter", show);
+    day.addEventListener("mouseleave", hide);
+    day.addEventListener("touchstart", show, { passive: true });
+  });
+  document.addEventListener("touchstart", function (e) {
+    if (!chart.contains(e.target)) tip.classList.remove("is-visible");
+  }, { passive: true });
 })();

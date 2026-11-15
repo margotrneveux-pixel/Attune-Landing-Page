@@ -1,6 +1,6 @@
 # Attune landing page
 
-The pre-launch landing page for Attune, the AI training-plan and adaptive-nutrition app for runners, cyclists and triathletes. It has four sections:
+The pre-launch landing page for Attune, the AI training-plan and adaptive-nutrition app for runners and triathletes. It has four sections:
 
 1. **The concept**: what Attune is, and the >90% of athletes who are amateurs
 2. **The problem**: under-fuelling and RED-S risk, plus five pain points from athlete interviews
